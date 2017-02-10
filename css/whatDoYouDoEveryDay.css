@@ -1,0 +1,89 @@
+/* 
+ * CSS of whatDoYouDoEveryDay.html
+ */
+
+/**/
+
+#timeline, #timeline > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	
+	height: 200px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+#timeline {
+	border: 1px solid black;
+}
+#timeline > div {
+	box-shadow: inset 0 0 0 1px black;
+}
+
+.inputLabel {
+	display: inline-block;
+	width: 9%;
+}
+#workName, .workName {
+	width: 90%;
+}
+#hour, .hour, #min, .min {
+	width: 35px;
+}
+
+.important {
+	background-color: red;
+	color: white;
+}
+.normal {
+	background-color: yellow;
+	color: black;
+}
+.optional {
+	background-color: lightgreen;
+	color: blue;
+}
+
+.sortable {
+	list-style-type: none;
+	padding: 0;
+}
+.sortable > li {
+	border: 1px dashed black;
+	padding: 5px;
+	margin: 5px 0;
+}
+.sortHandler {
+	cursor: move;
+}
+
+.sortable-placeholder {
+	height: 42px;
+	border: 1px dashed black;
+	background-color: orange!important;
+}
+
+#exportImport {
+	width: 100%;
+	height: 200px;
+}
+
+#timelineSeparate, #timelineHours {
+	display: flex;
+	box-sizing: border-box;
+}
+#timelineSeparate, .timelineSp {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	box-sizing: border-box;
+}
+.timelineSp {
+	flex: 1 1 0;
+	height: 5px;
+}
+.timelineHour {
+	flex: 1 1 0;
+	text-align: center;
+	justify-content: center;
+}
