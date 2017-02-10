@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>What do you do every day</title>
+		<meta charset="utf-8" />
+		<script src="js/jquery.js" type="text/javascript" ></script>
+		<script src="js/jquery.sortable.js" type="text/javascript" ></script>
+		<script src="js/whatDoYouDoEveryDay.js" type="text/javascript" ></script>
+		<link href="css/whatDoYouDoEveryDay.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<h1>Timeline</h1>
+		<div id="timeline" >
+			<div id="freeTime" class="optional" title="Free time" style="flex: 1440 1 0"><span>Free time</span></div>
+		</div>
+		<div id="timelineSeparate"></div>
+		<div id="timelineHours"></div>
+		<p id="timeLeft" >You have 24 hours left!</p>
+		<p id="timeOptional" ></p>
+		<div id="inputWork" >
+			<span class="inputLabel" >Work name:</span><input id="workName" type="text" /><br />
+			<span class="inputLabel" >Work duration:</span><input id="hour" type="number" min="0" max="24" /><span>hour(s)</span><input id="min" type="number" min="0" max="59" /><span>min(s)</span><br />
+			<span class="inputLabel" >Work level:</span>
+			<select id="workLevel" >
+				<option value="important" >Important</option>
+				<option value="normal" >Normal</option>
+				<option value="optional" >Optional</option>
+			</select>
+			<p id="msg" ></p>
+			<button id="submit" >Submit</button>
+		</div>
+		<div id="listWork" >
+			<h1>List work</h1>
+			<ul class="sortable"></ul>
+		</div>
+		<textarea id="exportImport" ></textarea><br />
+		<button id="btnExport">Export</button>
+		<button id="btnImport">Import</button>
+		
+		<template id="workItem" >
+			<li class="workItem" draggable="true" >
+				<span class="sortHandler"> ::</span>
+				<input class="workName" type="text" title="" /><br />
+				
+				<span class="sortHandler"> ::</span>
+				<input class="hour" type="number" value="" min="0" max="24" /><span>h</span><input class="min" type="number" value="" min="0" max="59" /><span>m</span>
+				<select class="workLevel" >
+					<option value="important" >Important</option>
+					<option value="normal" >Normal</option>
+					<option value="optional" >Optional</option>
+				</select>
+				<button class="edit" >Edit</button>
+				<button class="del" >Del</button>
+			</li>
+		</template>
+		
+	</body>
+</html>
